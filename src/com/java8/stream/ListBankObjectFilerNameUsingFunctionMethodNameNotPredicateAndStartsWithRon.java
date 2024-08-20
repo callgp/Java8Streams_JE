@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class ListBankObjectFilerNameUsingFilterNotPredicateAndStartsWithRon {
+public class ListBankObjectFilerNameUsingFunctionMethodNameNotPredicateAndStartsWithRon {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,7 +19,7 @@ public class ListBankObjectFilerNameUsingFilterNotPredicateAndStartsWithRon {
 			asList.add(new Bank("john",31));
 			asList.add(new Bank("rons",38));		
 		
-			Function<Bank,String> f=bank->bank.getName();
+			Function<Bank,String> f=Bank::getName;
 	List<String> filteredNames=	asList.stream()
 		.filter(bank-> bank.getName() != null && bank.getName().startsWith("ron"))
 		.map(f)
