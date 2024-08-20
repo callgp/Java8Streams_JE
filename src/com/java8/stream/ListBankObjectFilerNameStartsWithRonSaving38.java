@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ListBankObjectFilerNameStartsWithRon {
+public class ListBankObjectFilerNameStartsWithRonSaving38 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -19,7 +19,7 @@ public class ListBankObjectFilerNameStartsWithRon {
 			asList.add(new Bank("ron",38));		
 		
 	List<Bank> filteredNames=	asList.stream()
-		.filter(bank-> bank.getName() != null && bank.getName().startsWith("ron") & )
+		.filter(bank-> bank.getName() != null && bank.getName().startsWith("ron") && bank.getSaving()==38)
 		.collect(Collectors.toList());
 		
 	filteredNames.forEach(System.out::println);
